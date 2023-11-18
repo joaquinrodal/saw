@@ -11,6 +11,7 @@ admin --> usuario administrador
 #-------------------------------------------
 # vscode online-->
 wget https://github.com/cdr/code-server/releases/download/v4.3.0/code-server-4.3.0-linux-amd64.tar.gz
+wget https://github.com/cdr/code-server/releases/download/v4.18.0/code-server-4.18.0-linux-amd64.tar.gz
 tar -xzvf code-server-4.3.0-linux-amd64.tar.gz
 sudo cp -r code-server-4.3.0-linux-amd64 /usr/lib/code-server
 
