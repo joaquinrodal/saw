@@ -4,8 +4,14 @@
 # Crear base de datos con utf8 sencible.
 CREATE DATABASE asesoria CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-
-
+en el contenedor docker -- donde está instalado mariadb
+#------------------------------------------
+para ponerlo en marcha:
+service mariadb start
+luego comprueba con
+netstat -tanp 
+-- para ver si está en ejecucion.
+#-------------------------------------------
 sudo apt install -y mariadb-server 
 systemctl status mariadb
 
