@@ -5,6 +5,15 @@ y entramos en modo root
 service mariadb start    --> arrancamos el servidor mariadb
 netstat -tanp  --> comprobamos que está levantado el puerto 3306
 
+Como VSCODE , lo tengo instalado en el contenedor , lo inicio en el puerto 8080
+pero tengo que poner una PASSWORD = 'adriana03' , como variable de entorno de linux
+en debian es el siguiente comando :
+
+export PASSWORD="adriana03" 
+/usr/bin/code-server --bind-addr 0.0.0.0:8080 --user-data-dir /var/lib/code-server --auth password 
+
+con esto ya está iniciado el VSCODE
+
 #-------------------------------------------
 # vscode online-->
 wget https://github.com/cdr/code-server/releases/download/v4.3.0/code-server-4.3.0-linux-amd64.tar.gz
