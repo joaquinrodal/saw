@@ -1,0 +1,53 @@
+* Como aparecer una ventana de x dimensiones
+* 1º style="display:none" --> para que no aparezca ningun destello cuando carga
+* 2º x-show = "" --> condicion para ocultar y que no se vea la ventana
+* 3º fixed top-[90px] left-[220px] w-[calc(100vw-230px)] h-[calc(100vh-120px)] -->
+      fixed -> posicion fija
+      top -> posicion top
+
+* transicion -->
+
+          # esto ocurre cuando es visible
+          x-transition:enter="transition-all duration-[500ms]"  --> durecion
+          x-transition:enter-start="left-[3220px]"  --> empezar 
+          x-transition:enter-end="left-[220px]" --> terminar 
+
+          # esto ocurre cuando desparece la ventana
+
+          x-transition:leave="transition-all duration-[1500ms]" 
+          x-transition:leave-start="left-[220px]" 
+          x-transition:leave-end="left-[3220px] " 
+
+
+    <div  style="display:none;"
+         
+          x-show="tab == 'configuracion'"
+          class="fixed top-[90px] left-[220px] w-[calc(100vw-230px)] h-[calc(100vh-120px)] border
+                bg-white rounded-[5px]"
+                x-transition:enter="transition-all duration-[500ms]" 
+                x-transition:enter-start="left-[3220px]" 
+                x-transition:enter-end="left-[220px]"
+                x-transition:leave="transition-all duration-[1500ms]" 
+                x-transition:leave-start="left-[220px]" 
+                x-transition:leave-end="left-[3220px] "   
+                
+                >
+                                                      
+   <div class="w-[90%] m-auto flex justify-center items-center h-[40px]">
+       <div   style="font-family: 'Roboto_thin', sans-serif;"
+              class="text-[20px]"
+             >Configuracion</div>
+        <div
+        @click="tab=''"
+         >hola</div>
+         <div x-text="men"></div>
+        <div   
+               x-init='caja($el,"men")'>
+
+        </div>
+   </div>
+
+
+
+
+    </div>
