@@ -14,6 +14,24 @@ export PASSWORD="adriana03"
 
 con esto ya está iniciado el VSCODE
 
+INSTALAR --> EN VSCODE
+ES6-STRING-HTML 
+Y LUEGO EN SETTING.JSON DE EMMET EN CONFIGURACION..
+{
+    "files.exclude": {
+        ".*": true
+    },
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontSize": 18,
+    "terminal.integrated.fontSize": 18,
+    "emmet.includeLanguages": {
+        "javascript": "html"
+    },
+    "files.autoSave": "off",
+    "workbench.iconTheme": "vscode-icons",
+    "keyboard.layout": "com.apple.keylayout.Spanish-ISO"
+}
+
 #-------------------------------------------
 # vscode online-->
 wget https://github.com/cdr/code-server/releases/download/v4.3.0/code-server-4.3.0-linux-amd64.tar.gz
