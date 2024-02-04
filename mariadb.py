@@ -107,3 +107,16 @@ sudo apt install libmariadb3 libmariadb-dev
 
 luego instala el modulo 
 pip install mariadb
+
+hasta este momento tenia problemas 
+cuando instalamos 
+pip install mariadb --> se instala mariadb   1.1.6 
+
+pero hay que instalar otra version
+#------------------------------------------------
+# IMPORTANTES 
+#------------------------------------------------
+pip install mariadb==1.1.9
+
+
+
