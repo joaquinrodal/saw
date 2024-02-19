@@ -1,0 +1,11 @@
+
+
+git -v
+git config --global user.name = "Joaquin Rodal Chorro"
+git config --global user.email = "informatico.joaquin@gmail.com"
+
+git init 
+git status 
+git add fichero
+git add .
+git commit -m "mi primer comit " 
