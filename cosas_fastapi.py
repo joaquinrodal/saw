@@ -21,3 +21,5 @@ gunicorn -b 0.0.0.0:8000 your_module:app
 
 pip install gunicorn 
 gunicorn -b 0.0.0.0:8200 -k uvicorn.workers.UvicornWorker servidor:app
+
+gunicorn -b 0.0.0.0:8200  servidor:app
