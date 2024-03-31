@@ -87,4 +87,33 @@ teniendo en cuenta lo siguiente ---->
 estado2:Optional[str] = ''
 
 
+# IMPORTANTE
+
+    usuarios = db.query(Usuario).all()
+    
+    salida = []
+    for u in usuarios:
+        us = Pydantic_usuario.from_orm(u)
+      
+        salida.append(us)
+      
+    salida2 = [
+        Pydantic_usuario.from_orm(u) for u in usuarios
+    ]
+
+# PERO CON ESTO SOBRAN PALABRAS 
+
+class Pydantic_usuario(BaseModel):
+
+    class Config:
+        orm_mode = True
+      
+@app.post("/admin/listar_usuarios3",response_model=List[Pydantic_usuario], tags=["operaciones"])
+def listar_usuarios3(db: Session = Depends(get_session)):
+    usuarios = db.query(Usuario).all()
+
+    return usuarios
+
+
+
 
