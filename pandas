@@ -1,0 +1,22 @@
+
+Las funciones de agregación que puedes utilizar en una agrupación de datos en Pandas incluyen:
+
+count(): Cuenta el número de elementos en cada grupo.
+sum(): Calcula la suma de los valores en cada grupo.
+mean(): Calcula el promedio de los valores en cada grupo.
+median(): Calcula la mediana de los valores en cada grupo.
+min(): Encuentra el valor mínimo en cada grupo.
+max(): Encuentra el valor máximo en cada grupo.
+std(): Calcula la desviación estándar de los valores en cada grupo.
+var(): Calcula la varianza de los valores en cada grupo.
+size(): Cuenta el número de elementos en cada grupo (igual que count(), pero incluye también grupos con valores nulos).
+agg(): Aplica una o más funciones de agregación personalizadas a cada grupo.
+apply(): Aplica una función personalizada a cada grupo.
+describe(): Calcula estadísticas descriptivas para cada grupo.
+first(): Obtiene el primer valor en cada grupo.
+last(): Obtiene el último valor en cada grupo.
+nth(): Obtiene el enésimo valor en cada grupo.
+cumsum(): Calcula la suma acumulativa de los valores en cada grupo.
+cumprod(): Calcula el producto acumulativo de los valores en cada grupo.
+cummax(): Encuentra el valor máximo acumulativo en cada grupo.
+cummin(): Encuentra el valor mínimo acumulativo en cada grupo.
