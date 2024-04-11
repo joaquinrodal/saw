@@ -1,0 +1,32 @@
+
+
+
+
+.grid {
+
+  width:800px;
+  display:grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 5px;
+  margin:auto;
+
+  & .item {
+    color: red;
+    font-family: jost ,sans-serif;
+    font-size: 2rem;
+    counter-increment : number 1;
+    display:grid ;
+    place-items: start end ;
+    
+    &::after {
+      content: counter(number);
+    }
+    &:nth-child(4){
+
+    }
+    &:hover {
+      background:green;
+    }
+    
+    
+}
