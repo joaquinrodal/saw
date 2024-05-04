@@ -36,6 +36,20 @@ element.classList;  // ["info", "data", "dark", "uno", "dos"]
 element.classList.remove("uno", "dos");
 element.classList;  // ["info", "data", "dark"]
 
+Otro ayudante muy interesante es el del método .classList.toggle(), que lo que hace es añadir o eliminar la clase CSS dependiendo de si ya existía previamente. Es decir, añade la clase si no existía previamente o elimina la clase si existía previamente:
+
+const element = document.querySelector("#page");
+
+element.classList; // ["info", "data", "dark"]
+
+element.classList.toggle("info"); // Como "info" existe, lo elimina. Devuelve "false"
+element.classList; // ["data", "dark"]
+
+element.classList.toggle("info"); // Como "info" no existe, lo añade. Devuelve "true"
+element.classList; // ["info", "data", "dark"]
+
+Observa que .toggle() devuelve un  que será true o false dependiendo de si, tras la operación, la clase sigue existiendo o no. Ten en cuenta que en .toggle(), al contrario que .add() o .remove(), sólo se puede indicar una clase CSS por parámetro.
+
 Al utilizar los métodos .add() o .remove(), en el caso de que se añada una clase CSS 
   que ya existía previamente, o que se elimine una clase CSS que no existía, 
     simplemente no ocurrirá nada.
