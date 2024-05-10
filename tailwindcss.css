@@ -1,0 +1,15 @@
+
+<!--cuerpo-->
+<div class="grid grid-cols-[repeat(3,1fr)] ">
+     <div>1</div>
+     <div>2</div>
+     <div>3</div>
+</div>
+
+en el grid 
+grid-cols-[repeat(3,1fr)]
+grid-cols-[1fr,1fr,1fr]
+grid-cols-[33%,33%,33%]
+grid-cols-[20%,1fr,200px,repeat(3,1fr),repeat(3,20%)]
+
+podemos ponerlo de muchas formas ...
