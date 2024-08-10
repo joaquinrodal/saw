@@ -1,0 +1,15 @@
+
+2. Instala net-tools
+Este paquete incluye netstat junto con otras utilidades de red.
+
+sudo apt-get install net-tools
+
+
+netstat -tanp
+
+Alternativa: Uso de ss
+Debido a que netstat es parte de un conjunto de herramientas más antiguo, 
+en muchos sistemas modernos se recomienda usar ss, que es parte del paquete 
+iproute2 y proporciona funcionalidad similar con mejor rendimiento:
+
+ss -tuln
