@@ -1,0 +1,49 @@
+
+Para usar SFTP (Secure File Transfer Protocol) en AWS, necesitas seguir varios pasos para conectarte a tu instancia y transferir archivos de manera segura. Aquí te explico cómo hacerlo.
+
+1. Prepara tu clave SSH
+Asegúrate de tener tu archivo de clave privada (.pem) que usas para conectarte a tu instancia de AWS. Este archivo es crucial para autenticarte en la instancia.
+
+Si aún no lo has hecho, cambia los permisos de la clave privada para que SSH la acepte:
+
+bash
+Copiar código
+chmod 400 nombre-de-la-clave.pem
+2. Conéctate usando SFTP
+Puedes conectarte a tu instancia AWS usando SFTP desde la línea de comandos o un cliente gráfico. Aquí te muestro cómo hacerlo de ambas formas.
+
+Usando la línea de comandos (Linux/Mac/Windows con WSL)
+Abre la terminal.
+
+Conéctate usando SFTP:
+
+bash
+Copiar código
+sftp -i nombre-de-la-clave.pem usuario@ip_de_tu_instancia
+
+sftp -i mi-clave.pem debian@123.45.67.89
+
+
+
+Navega y transfiere archivos:
+
+*** Para ver los archivos en el servidor:
+
+ls
+*** Para ver los archivos en tu máquina local:
+
+lls
+*** Para descargar un archivo desde la instancia a tu máquina local:
+
+get nombre_del_archivo
+*** Para subir un archivo desde tu máquina local a la instancia:
+
+put nombre_del_archivo
+*** Para salir de la sesión SFTP:
+
+exit
+
+
+Reemplaza nombre-de-la-clave.pem con el nombre de tu archivo de clave privada.
+Reemplaza usuario con el nombre de usuario predeterminado (ec2-user, ubuntu, debian, etc.).
+Reemplaza ip_de_tu_instancia con la dirección IP pública de tu instancia
