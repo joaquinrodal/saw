@@ -1,3 +1,14 @@
+
+en thonny 
+Micropython v.1.23.0
+exec(open("boot.py").read())
+exec(open("main.py").read())
+exec(open("publisher.py").read())
+exec(open("subscriber.py").read())
+
+
+
+
 boot.py
 # This file is executed on every boot (including wake-boot from deepsleep)
 #import esp
