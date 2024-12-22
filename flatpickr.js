@@ -38,5 +38,32 @@
                   x-ref="fecha_registro" 
                   placeholder="Selecciona una fecha">
       </div>
+
+
     
    </div> 
+
+
+<style >
+                      
+
+    .flatpickr-calendar {
+    font-size: 1.3rem;  /* Cambia el tamaño del texto */
+    width: 350px;       /* Ajusta el ancho */
+                      
+               
+                      
+</style>
+
+    <script>
+        flatpickr("#date", {
+            locale: "es",
+            dateFormat: "Y-m-d",
+        });
+    </script>
+
+
+
+
+
+
